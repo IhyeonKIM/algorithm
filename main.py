@@ -1,10 +1,16 @@
-## 1.완전 탐색
-def TwoSum(nums, target):
-  for i in range(len(nums)):
-    for j in range(len(nums)):
-      if nums[i] + nums[j] == target:
-        return True
-  return False
+def TwoSum( nums , target):
+  start = 0
+  final = len(nums)-1
+  nums.sort()
 
+  while start < final:
+    if nums[start] + nums[final] > target:
+      final -= 1
+    elif nums[start] + nums[final] < target: 
+      start += 1
+    elif nums[start] + nums[final] == target:
+      return True 
 
-print(TwoSum(nums = [1, 2, 3, 4, 6], target = 10))
+  return False 
+  
+print(TwoSum([1,2,3,4,6], 10))
