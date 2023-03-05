@@ -13,4 +13,4 @@ def TwoSum( nums , target):
 
   return False 
   
-print(TwoSum([1,2,3,4,6], 10))
+print(TwoSum([1,2,3,5], 10))
